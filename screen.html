@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pool Party</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="screen.css">
+  <script src="https://www.airconsole.com/api/airconsole-1.11.0.js"></script>
+</head>
+<body>
+  <div id="stage">
+    <div id="pool">
+      <video id="water" autoplay muted loop playsinline preload="auto">
+        <source src="water.webm" type="video/webm">
+        <source src="water.mp4" type="video/mp4">
+      </video>
+      <div id="tiles"></div>
+      <div id="caustics"></div>
+    </div>
+    <canvas id="game"></canvas>
+    <div id="edge"></div>
+
+    <!-- In-round HUD -->
+    <div id="hud" class="hidden">
+      <div id="modeChip" class="chip"></div>
+      <div id="miniBoard"></div>
+    </div>
+    <div id="banner"><div id="bannerTop"></div><div id="bannerMain"></div></div>
+    <div id="toast"></div>
+
+    <!-- Lobby / results / champion -->
+    <div id="overlay">
+      <div id="panel" class="glass"></div>
+    </div>
+
+    <button id="soundBtn" class="hidden" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19.5 5.5a9 9 0 0 1 0 13"/></svg><span>Click to turn on sound</span></button>
+    <div id="credits">Pool Party · original game: Global Game Jam 2017 team · music: “Meatball Parade” Kevin MacLeod (incompetech.com) CC BY 4.0</div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="sound.js"></script>
+  <script src="screen.js"></script>
+</body>
+</html>

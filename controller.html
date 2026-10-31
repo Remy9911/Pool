@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Pool Party controller</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="controller.css">
+  <script src="https://www.airconsole.com/api/airconsole-1.11.0.js"></script>
+</head>
+<body>
+  <!-- connecting -->
+  <section id="vWait" class="view center">
+    <div class="spinner"></div>
+    <div class="muted">Connecting to the pool…</div>
+  </section>
+
+  <!-- full -->
+  <section id="vFull" class="view center hidden">
+    <div class="big">Pool is full</div>
+    <div class="muted">8 players max — wait for the next game.</div>
+  </section>
+
+  <!-- between rounds: vote + ready -->
+  <section id="vReady" class="view hidden">
+    <header class="me">
+      <div class="meFloat"><img id="rImg" alt=""></div>
+      <div class="meText">
+        <div id="rName" class="meName"></div>
+        <div id="rTitle" class="meTitle"></div>
+        <div id="rSub" class="meSub"></div>
+      </div>
+    </header>
+    <div id="rPips" class="pips"></div>
+    <div id="boardWrap" class="hidden">
+      <div id="boardLabel" class="label">STANDINGS</div>
+      <div id="board"></div>
+    </div>
+    <div id="modesWrap">
+      <div class="label">VOTE FOR THE NEXT MODE</div>
+      <div id="modes"></div>
+    </div>
+    <button id="readyBtn" type="button"><span>READY</span></button>
+  </section>
+
+  <!-- round: tap pad -->
+  <section id="vPad" class="view hidden">
+    <div id="padBg"></div>
+    <div class="padTop">
+      <div id="pMode" class="modeChip"></div>
+      <div id="pPips" class="pips small"></div>
+    </div>
+    <div id="pad">
+      <div id="aim"><div class="ringGuide"></div><img id="pImg" alt=""></div>
+      <div id="arrow"></div>
+    </div>
+    <div class="hint">Tap around your float to splash.<br><b>You shoot the opposite way.</b></div>
+    <div id="banner"><div id="bannerText"></div><div id="bannerBar"></div></div>
+    <div id="frozen" class="hidden"><div>FROZEN</div></div>
+    <div id="outCover" class="hidden"><div class="big">You're out!</div><div class="muted">Watch the TV — next round soon.</div></div>
+    <div id="specCover" class="hidden"><div class="big">Next round</div><div class="muted">You'll join when this round ends.</div></div>
+  </section>
+
+  <script src="common.js"></script>
+  <script src="controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pool Party</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root { --gold: #ffcf4a; --muted: rgba(220,236,255,0.75); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: "Fredoka", system-ui, sans-serif; font-weight: 500; color: #fff;
+    background: #0a2a4f;
+    display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+  }
+  video.bg { position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .shade { position: fixed; inset: 0; z-index: -1; background: radial-gradient(90% 90% at 50% 40%, rgba(4,20,45,0.35), rgba(4,18,40,0.8)); }
+  .card {
+    width: min(760px, 100%); padding: clamp(24px, 5vw, 48px); border-radius: 32px;
+    background: rgba(8, 30, 60, 0.62); border: 1px solid rgba(255,255,255,0.16);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  }
+  .top { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .floats { display: flex; }
+  .floats img { width: 64px; height: 64px; object-fit: cover; transform: scale(1.45); margin-right: -6px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35)); }
+  h1 {
+    margin: 0; font-weight: 700; font-size: clamp(48px, 9vw, 84px); line-height: 0.95; letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #fff 0%, #bff3ff 55%, #63d6f5 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .tag { color: var(--gold); letter-spacing: 0.22em; font-weight: 600; font-size: 14px; margin-top: 8px; }
+  .play {
+    display: block; margin: 28px 0 8px; padding: 22px; border-radius: 22px; text-align: center; text-decoration: none;
+    font-size: 30px; font-weight: 700; letter-spacing: 0.04em; color: #04301a;
+    background: linear-gradient(180deg, #5df09a, #2cc56c); box-shadow: 0 8px 0 #1f9452, 0 16px 30px rgba(0,0,0,0.3);
+    transition: transform .08s, box-shadow .08s;
+  }
+  .play:hover { filter: brightness(1.05); }
+  .play:active { transform: translateY(5px); box-shadow: 0 3px 0 #1f9452, 0 8px 16px rgba(0,0,0,0.3); }
+  .small { text-align: center; color: var(--muted); font-size: 14px; }
+  ol { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
+  li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,0.07); line-height: 1.35; }
+  li b { color: #fff; }
+  li span.n { flex: none; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; background: #2ec5c5; color: #04303a; }
+  li div { color: var(--muted); }
+  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
+  .m { padding: 12px 14px; border-radius: 16px; background: rgba(255,255,255,0.07); font-size: 14px; color: var(--muted); }
+  .m b { display: block; font-size: 17px; margin-bottom: 2px; }
+  @media (max-width: 560px) { .modes { grid-template-columns: 1fr; } }
+  footer { margin-top: 24px; font-size: 12px; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.5; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<video class="bg" autoplay muted loop playsinline><source src="water.webm" type="video/webm"><source src="water.mp4" type="video/mp4"></video>
+<div class="shade"></div>
+<main class="card">
+  <div class="top">
+    <div class="floats"><img src="float-donut.png" alt=""><img src="float-melon.png" alt=""><img src="float-duck.png" alt=""><img src="float-purple.png" alt=""></div>
+    <div><h1>Pool Party</h1><div class="tag">2–8 PLAYERS · PHONES AS CONTROLLERS</div></div>
+  </div>
+
+  <a class="play" id="play" href="https://www.airconsole.com/#https://remy9911.github.io/Pool/">PLAY ON AIRCONSOLE</a>
+  <div class="small">Opens AirConsole in this browser. Chrome on a laptop works best.</div>
+
+  <ol>
+    <li><span class="n">1</span><div><b>Big screen:</b> connect the laptop to the TV (HDMI), press Play above and go fullscreen with <b>F11</b>. Click once on the page to turn on sound.</div></li>
+    <li><span class="n">2</span><div><b>Phones:</b> everyone opens <b>airconsole.com</b> (or the AirConsole app) and types the code shown on the TV.</div></li>
+    <li><span class="n">3</span><div><b>Play:</b> vote a mode, tap <b>READY</b>. Tap around your float to splash — you shoot the opposite way. Last float in the pool wins the round; first to 5 wins takes the match.</div></li>
+  </ol>
+
+  <div class="modes">
+    <div class="m"><b>Classic</b>Push everyone out.</div>
+    <div class="m"><b>Shrinking Pool</b>The pool closes in after 15 s.</div>
+    <div class="m"><b>Booster Mayhem</b>Turbo, giant, shield, shockwave, freeze.</div>
+  </div>
+
+  <footer>
+    Fan remake of Pool Party (Global Game Jam 2017) for private play.<br>
+    Music: “Meatball Parade” Kevin MacLeod (incompetech.com), CC BY 4.0.
+  </footer>
+</main>
+<script>
+  // Works under any GitHub Pages path / fork
+  (function () {
+    var base = location.origin + location.pathname.replace(/[^/]*$/, "");
+    if (/^https:/.test(base)) document.getElementById("play").href = "https://www.airconsole.com/#" + base;
+  })();
+</script>
+</body>
+</html>
