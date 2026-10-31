@@ -20,7 +20,7 @@ html, body {
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---------- ready view ---------- */
-#vReady { display: flex; flex-direction: column; gap: 14px; }
+#vReady { display: flex; flex-direction: column; gap: 14px; padding-top: max(46px, env(safe-area-inset-top)); }
 #vReady.hidden { display: none; }
 .me { display: flex; align-items: center; gap: 14px; }
 .meFloat {

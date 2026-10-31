@@ -8,8 +8,8 @@
   var CFG = {
     worldH: 10,               // world units across the pool height
     radius: 0.95,             // float radius (world units)
-    impulse: 4.4,             // velocity change per tap
-    damping: 1.15,            // linear drag (per second)
+    impulse: 3.4,             // velocity change per tap
+    damping: 1.35,            // linear drag (per second)
     frozenDamping: 5,
     restitution: 0.92,
     tapCooldown: 0.11,        // seconds between taps per player
@@ -229,7 +229,7 @@
   // ------------------------------------------------------------------ geometry
   function spawnPoint(k, n) {
     var cx = (play.x0 + play.x1) / 2, cy = (play.y0 + play.y1) / 2;
-    var rx = (play.x1 - play.x0) * 0.31, ry = (play.y1 - play.y0) * 0.29;
+    var rx = (play.x1 - play.x0) * 0.28, ry = (play.y1 - play.y0) * 0.24;
     var a = Math.PI * 2 * k / Math.max(2, n) + Math.PI * 0.75;
     return { x: cx + Math.cos(a) * rx, y: cy + Math.sin(a) * ry };
   }
